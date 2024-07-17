@@ -25,8 +25,8 @@ class GamePieces:
         getattr(self, f"_calculate_{self.piece_type}_moves")(board)
         return self.legal_moves
 
-    def get_legal_moves(self):
-        # getattr(self, f"_calculate_{self.piece_type}_moves")(board)
+    def get_legal_moves(self, board):
+        getattr(self, f"_calculate_{self.piece_type}_moves")(board)
         return self.legal_moves
 
     def get_legal_captures(self, board):
